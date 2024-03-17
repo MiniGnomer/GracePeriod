@@ -1,0 +1,14 @@
+name: GracePeriod
+version: '${project.version}'
+main: me.minignomer.graceperiod.GracePeriod
+api-version: 1.20
+authors: [ MiniGnomer ]
+description: A simple grace period plugin
+commands:
+  graceperiod:
+    usage: /<command> <enable/disable> <amount of time> <seconds/minutes/hours>
+    description: Used to enable or disable the grace period after a specified amount of time.
+    permission: graceperiod.graceperiod
+    aliases:
+      - grace
+      - gp
