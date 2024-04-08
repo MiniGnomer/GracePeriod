@@ -14,7 +14,9 @@ public class GraceperiodTabcompleter implements TabCompleter {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         List<String> options = new ArrayList<>();
-        switch (args.length) {
+
+        switch (args.length)
+        {
             case 1:
                 options.add("enable");
                 options.add("disable");
@@ -25,7 +27,7 @@ public class GraceperiodTabcompleter implements TabCompleter {
                 options.add("5");
                 options.add("10");
                 options.add("15");
-                options.add("20");
+                options.add("30");
                 return options;
             case 3:
                 options.add("seconds");

@@ -13,10 +13,10 @@ public class DamageEvent extends GraceperiodCommand implements Listener {
     public void onDamage(EntityDamageByEntityEvent event) {
         Entity player = event.getEntity();
         Entity damager = event.getDamager();
-        if (player.getType() == EntityType.PLAYER && damager.getType() == EntityType.PLAYER) {
-            if (GraceperiodCommand.enabled) {
-                event.setCancelled(true);
-            }
-        }
+
+        if (player.getType() != EntityType.PLAYER || damager.getType() != EntityType.PLAYER) return;
+        if (!GraceperiodCommand.enabled) return;
+
+        event.setCancelled(true);
     }
 }
